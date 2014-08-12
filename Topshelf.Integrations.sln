@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topshelf.Ninject", "Source\Topshelf.Ninject\Topshelf.Ninject.csproj", "{F26B9EC4-13CF-4093-BD1F-65F9538FD68A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Topshelf.Quartz", "Source\Topshelf.Quartz\Topshelf.Quartz.csproj", "{E1751F00-1C7E-45BA-942E-A014F9958E16}"
@@ -20,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Topshelf.Quartz.JobAsService", "Samples\Sample.Topshelf.Quartz.JobAsService\Sample.Topshelf.Quartz.JobAsService.csproj", "{AC43A2CC-AAA6-4EB8-97D3-9A7322663489}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Topshelf.WebApi", "Samples\Sample.Topshelf.WebApi\Sample.Topshelf.WebApi.csproj", "{022EF609-B8F4-4808-8027-582E7ACCBAA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Topshelf.Quartz.InterruptableJobAsService", "Samples\Sample.Topshelf.Quartz.InterruptableJobAsService\Sample.Topshelf.Quartz.InterruptableJobAsService.csproj", "{54C97B0A-7E43-4F52-95B7-EB233FCA758C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -106,6 +110,16 @@ Global
 		{022EF609-B8F4-4808-8027-582E7ACCBAA4}.Release 4.5|Any CPU.ActiveCfg = Release|Any CPU
 		{022EF609-B8F4-4808-8027-582E7ACCBAA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{022EF609-B8F4-4808-8027-582E7ACCBAA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C}.Release 3.5|Any CPU.ActiveCfg = Release|Any CPU
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C}.Release 3.5|Any CPU.Build.0 = Release|Any CPU
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C}.Release 4.0|Any CPU.ActiveCfg = Release|Any CPU
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C}.Release 4.0|Any CPU.Build.0 = Release|Any CPU
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C}.Release 4.5|Any CPU.ActiveCfg = Release|Any CPU
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C}.Release 4.5|Any CPU.Build.0 = Release|Any CPU
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,5 +129,6 @@ Global
 		{A2252EE8-D2D9-4F81-B1C6-A7E2D03EF314} = {1964C84C-7159-4FEE-88EA-BEE1C45FF32A}
 		{AC43A2CC-AAA6-4EB8-97D3-9A7322663489} = {1964C84C-7159-4FEE-88EA-BEE1C45FF32A}
 		{022EF609-B8F4-4808-8027-582E7ACCBAA4} = {1964C84C-7159-4FEE-88EA-BEE1C45FF32A}
+		{54C97B0A-7E43-4F52-95B7-EB233FCA758C} = {1964C84C-7159-4FEE-88EA-BEE1C45FF32A}
 	EndGlobalSection
 EndGlobal

@@ -34,11 +34,15 @@ namespace Sample.Topshelf.Quartz.JobAsService
         }
     }
 
-    public class SampleJob : IJob
+    public class SampleJob : IInterruptableJob
     {
         public void Execute(IJobExecutionContext context)
         {
             Console.WriteLine("The current time is: {0}", DateTime.Now);
+        }
+
+        public void Interrupt()
+        {
         }
     }
 

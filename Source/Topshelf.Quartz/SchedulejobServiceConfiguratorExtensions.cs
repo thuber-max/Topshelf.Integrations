@@ -90,12 +90,22 @@ namespace Topshelf.Quartz
 
 					                                   });
 
-				configurator.BeforeStoppingService(() =>
-						                {
-											log.Debug("[Topshelf.Quartz] Scheduler shutting down...");
-											Scheduler.Shutdown(true);
-											log.Info("[Topshelf.Quartz] Scheduler shut down...");
-						                });
+                configurator.BeforeStoppingService(() =>
+                                                        {
+                                                            log.Info("[Topshelf.Quartz] Scheduler shutting down...");
+
+                                                            var executingJobs = Scheduler.GetCurrentlyExecutingJobs();
+                                                            foreach (var job in executingJobs)
+                                                            {
+                                                                log.InfoFormat("[Topshelf.Quartz] Attempt to interrupt currently executing job: {0}", job.JobDetail.JobType);
+                                                                if (job.JobInstance.GetType().GetInterfaces().Contains(typeof(IInterruptableJob)))
+                                                                {
+                                                                    ((IInterruptableJob)job.JobInstance).Interrupt();
+                                                                }
+                                                            }
+                                                            Scheduler.Shutdown(true);
+                                                            log.Info("[Topshelf.Quartz] Scheduler shut down...");
+                                                        });
 
 			}
 		}
